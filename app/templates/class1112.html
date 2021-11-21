@@ -1,0 +1,171 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/static/css/logincss.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
+    <title>Class 8</title>
+  </head>
+  <body>
+
+  <div class="banner">
+            <div class="navbar">
+                <img src="/static/images/logo.png" class="logo">
+                <ul>
+                <li><a href="{% url 'homepage' %}" style="color:white"><b>HOME</b></a></li>              
+                <li><a href="{% url 'pdfs' %}" style="color:white"><b>STUDY MATERIAL</b></a></li>
+                <li><a href="{% url 'logout' %}" style="color:white"><b>LOGOUT</b></a></li>
+                </ul>
+            </div>
+
+    <div class="container">
+      <div class="row my-3 mt-4">
+        <div class="col-sm-9 offset-sm-2">
+          <h3 align="center">Welcome {{request.user.username|capfirst}}</h3>
+          <h3 align="center">STUDY MATERIAL FOR CLASS 11 AND 12</h3>
+          <br />
+        <br>
+
+    <center>
+    <table class="table table-hover table-light mb-5">
+  <thead>
+    <tr>
+      <th scope="col">S.No</th>
+      <th scope="col">Mathematics</th>
+      <th scope="col">Physics</th>
+      <th scope="col">Economics</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><a href="https://drive.google.com/file/d/1I3VzzmSVFew0HUWIqIiemWM3vVSbuOU-/view">Sets</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-11-physics/chapter-1-physical-world/">Physical World</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-economics/">Indian Economy on the eve of Independence</a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><a href="https://drive.google.com/file/d/1Uch7kZuRgTndTYLGDlaOOiizQJDnJp_P/view">Relations and Functions</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-physics/">Motion</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-economics/">Indian economy(1950-1990)</a></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><a href="https://drive.google.com/file/d/1swcG6NVw2YeQDY6sRzsiXiMPci9bB2jg/view">Trigonometric Functions</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-physics/">Newtons Laws of Motion</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-economics/">Liberalisation</a></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><a href="https://drive.google.com/file/d/10rc01V4XBReNSq9UYayAUw2HxdwnbxBV/view">Principle of Mathematical Induction</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-physics/">Work Energy and Power</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-economics/">Poverty</a></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td><a href="https://drive.google.com/file/d/1MQWe33qbFTnvCIj5YLXQ0zn0rjT6USSE/view">Complex Numbers and Quadratic  Equations </a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-physics/">Systems of paricles and Rotatary Motion</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-economics/">Human capital formation in India</a></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td><a href="https://drive.google.com/file/d/1jYCProS7CVE2o51ZyX7-ijutXdghWIy2/view">Linear Inequalities</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-physics/">Gravitation</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-economics/">Rural Development</a></td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td><a href="https://drive.google.com/file/d/1uqU_H1VlLEGufAtQFsTrfey-NbXpNa91/view">Permutations and Combinations</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-physics/">Mechanical properties of solids and fluids</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-economics/">Employment growth informalisation and other issues</a></td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td><a href="https://drive.google.com/file/d/1NeD4e4NmLAygiwI0pm-QVWmI1f9AAxSb/view">Binomial Theorem</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-physics/">Thermal properties</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-economics/">Infrastructure</a></td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td><a href="https://drive.google.com/file/d/14fZAqGYtrtzpCDe3hVg5xRS6qo22EmA3/view">Sequence and series</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-physics/">Thermodynamics</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-economics/">Environment and sustainable development</a></td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td><a href="https://drive.google.com/file/d/1UM5HU_omg_YLPPJ3vB-Yic0xeDVRXnm2/view">Straight lines</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-physics/">Kinetic Theory</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-economics/">Comparative development experiences of India and its neighbours </a></td>
+    </tr>
+    <tr>
+      <th scope="row">11</th>
+      <td><a href="https://drive.google.com/file/d/1aQuzBuHqm2GxlvFM2tESaqhuSLZCba8u/view">Conic Sections</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-physics/">Oscilations</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-12-economics/">Theory of consumer behaviour</a></td>
+    </tr>
+    <tr>
+      <th scope="row">12</th>
+      <td><a href="https://drive.google.com/file/d/1W-FglfoMxDCv430oTm8lpM-XxpD_Jzdt/view">3D Geometry</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-physics/">Waves</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-12-economics/">Production and Cost</a></td>
+    </tr>
+    <tr>
+      <th scope="row">13</th>
+      <td><a href="https://drive.google.com/file/d/16lTzk5SywQcyK_fHFMZI-NYVZe_bee5T/view">Limits and Derivatives</a></td>
+      <td><a href="https://byjus.com/ncert-books-for-class-12/">Electricity</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-12-economics/">Market Equilibrium</a></td>
+    </tr>
+    <tr>
+      <th scope="row">14</th>
+      <td><a href="https://drive.google.com/file/d/1E8cko6j4YmD4E58tY_9b-DxcgTeU6vTu/view">Mathematical Reasoning</a></td>
+      <td><a href="https://byjus.com/ncert-books-for-class-12/">Electrostatics</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-12-economics/">Non-Competitive Markets</a></td>
+    </tr>
+    <tr>
+      <th scope="row">15</th>
+      <td><a href="https://drive.google.com/file/d/1Q4Mgou4LlJmQq3zKJUBYSyv708-aKxX-/view">Statitics</a></td>
+      <td><a href="https://byjus.com/ncert-books-for-class-12/">Magnetisum</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-12-economics/">National Income Accounting </a></td>
+    </tr>
+    <tr>
+      <th scope="row">16</th>
+      <td><a href="https://drive.google.com/file/d/1YVnp9yl4E5AEjPT2dRNH1HCIQNbNB2UX/view">Indefinite integrals</a></td>
+      <td><a href="https://byjus.com/ncert-books-for-class-12/">Ac current</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-economics/">Money and Banking</a></td>
+    </tr>
+    <tr>
+      <th scope="row">17</th>
+      <td><a href="https://drive.google.com/file/d/1_asqeCVbqsbhxPPtLWp3PjFw1arSJuJp/view">Probability</a></td>
+      <td><a href="https://byjus.com/ncert-books-for-class-12/">Electromagnetic waves</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-economics/">Government Budget and Economy</a></td>
+    </tr>
+    <tr>
+      <th scope="row">18</th>
+      <td><a href="https://drive.google.com/file/d/1YVnp9yl4E5AEjPT2dRNH1HCIQNbNB2UX/view">Integrals</a></td>
+      <td><a href="https://byjus.com/ncert-books-for-class-12/">Ray optics</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-11-economics/">Determination of Income and Employment</a></td>
+    </tr>    
+  </tbody>
+</table>
+</center>
+
+</div>
+</div>
+</div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>
+

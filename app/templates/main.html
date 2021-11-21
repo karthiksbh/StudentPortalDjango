@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>SCHOLAR+</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+        <div class="banner">
+            <div class="navbar">
+                <img src="/static/images/logo.png" class="logo">
+                <ul>
+                {% if request.user.is_authenticated %}
+                    <li><a href="{% url 'changepassword' %}"><b>CHANGE PASSWORD</b></a></li>
+                    <li><a href="{% url 'logout' %}"><b>LOGOUT</b></a></li>
+                {% endif %}
+                </ul>
+            </div>
+            <div class = "content">
+               
+                <h1> ABOUT </h1>
+                <P> Scholar+ is all about a perfect study partner for  
+                    students of all classes. Scholar+ provides students
+                    best study material and best mentorship from the best mentors
+                    accross. It also enables students to make their own to-do list 
+                    so that they can manage all the things effectively.
+                </P>
+                {% if request.user.is_authenticated %}
+                <div>
+              <button type="button"><span></span> <a href="{% url 'homepage' %}"style="color:white">HOME</a></button>
+              <button type="button"><span></span> <a href="{% url 'profile' %}"style="color:white">PROFILE</a></button>
+            </div>
+            {% else %}
+            <div>
+            <button type="button"><span></span> <a href="{% url 'login' %}"style="color:white">LOGIN</a></button>
+            <button type="button"><span></span> <a href="{% url 'userregistration' %}"style="color:white">REGISTER </a></button>
+            </div>
+            {% endif %}
+        </div>
+    </body>
+</html>
+

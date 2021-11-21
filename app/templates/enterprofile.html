@@ -1,0 +1,69 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/static/css/logincss.css">
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
+    <title>Login Page</title>
+  </head>
+  <body>
+
+     <div class="banner">
+            <div class="navbar">
+                <img src="/static/images/logo.png" class="logo">
+                <ul>
+                <li><a href="{% url 'homepage' %}" style="color:white"><b>HOME</b></a></li>              
+                <li><a href="{% url 'profile' %}" style="color:white"><b>PROFILE</b></a></li>
+                <li><a href="{% url 'logout' %}" style="color:white"><b>LOGOUT</b></a></li>
+                <ul>
+            </div>
+            
+      {% if request.user.is_authenticated %}
+     <div class="container">
+      <div class="row my-3 mb-3">
+        <div class="col-sm-6 offset-sm-3 mb-5">
+          <br />
+          <h3 align="center">Welcome {{request.user.username|capfirst}}</h3>
+          <h3 align="center">Create Your Profile</h3>
+          <br />
+          <form action="" method="post" novalidate class="shadow p-5" style="border-radius:15px ; border-style:solid ; border-style: double; background-color: white" ;>
+           {% csrf_token %} 
+            {% for fm in form %}
+              <div class="form-group mb-4">
+              <div class="forlabel mb-1">
+              {{fm.label_tag}}</div>{{fm}}
+              <small class="text-danger"> {{fm.errors|striptags}} </small>
+              </div>
+            {% endfor %}
+            <div class="buttonone" align="center">
+            <input type="submit" value="Create Profile" class="btn btn-success"/>
+            </div>
+            <br />
+            {% if form.non_field_errors %} 
+              {% for error in form.non_field_errors %}
+                <p class="alert alert-danger my-3">{{error}}</p>
+              {% endfor %}
+            {% endif %}
+
+          </form>
+        </div>
+      </div>
+    </div>
+    <div> 
+    {% endif %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+
+  </body>
+</html>
+

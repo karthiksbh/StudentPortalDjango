@@ -1,0 +1,72 @@
+{% load static %}
+
+<html>
+
+<head>
+  <title>SCHOLAR+</title>
+  <link rel="stylesheet" href="/static/css/style1.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="banner">
+    <div class="navbar">
+      <img src="/static/images/logo.png" class="logo">
+      <ul>
+      {% if request.user.is_authenticated %}
+        <li><a href="{% url 'homepage' %}" style="color:white"><b>HOME</b></a></li>
+        <li><a href="{% url 'profile' %}" style="color:white"><b>PROFILE</b></a></li>
+        <li><a href="{% url 'logout' %}" style="color:white"><b>LOGOUT</b></a></li>
+      </ul>
+      {% endif %}
+    </div>
+    
+    <div class="container">
+      <div class="card">
+        <div class="circle">
+          <img src="/static/images/8.jpeg">
+        </div>
+        <div class="content">
+          <h>CLASS 8</h><br>
+          <p>Click <b>open </b> to check out the ONLINE TUTORIAL of Class 8</p>
+          <a href="{% url 'vid8' %}" style="color:white">OPEN</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="circle">
+          <img src="/static/images/9.jpeg">
+        </div>
+        <div class="content">
+          <h>CLASS 9</h><br>
+          <p>Click <b>open </b> to check out the ONLINE TUTORIAL of Class 9</p>
+          <a href="{% url 'vid9' %}" style="color:white">OPEN</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="circle">
+          <img src="/static/images/10.jpeg">
+        </div>
+        <div class="content">
+          <h>CLASS 10</h><br>
+          <p>Click <b>open </b> to check out the ONLINE TUTORIAL of Class 10</p>
+          <a href="{% url 'vid10' %}" style="color:white">OPEN</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="circle">
+          <img src="/static/images/1112.jpeg">
+        </div>
+        <div class="content">
+          <h>CLASS 11-12</h><br>
+          <p>Click <b>open </b> to check out the ONLINE TUTORIAL of Class 11-12</p>
+          <a href="{% url 'vid1112' %}" style="color:white">OPEN</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

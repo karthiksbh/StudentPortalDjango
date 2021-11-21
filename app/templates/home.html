@@ -1,0 +1,70 @@
+<html>
+
+<head>
+  <title>SCHOLAR+</title>
+  <link rel="stylesheet" href="/static/css/style1.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="banner">
+    <div class="navbar">
+      <img src="/static/images/logo.png" class="logo">
+      <ul>
+      {% if request.user.is_authenticated %}
+        <li><a href="{% url 'mainpage' %}" style="color:white"><b>ABOUT US</b></a></li>
+        <li><a href="{% url 'changepassword' %}" style="color:white"><b>CHANGE PASSWORD</b></a></li>
+        <li><a href="{% url 'logout' %}" style="color:white"><b>LOGOUT</b></a></li>
+      </ul>
+      {% endif %}
+    </div>
+    
+    <div class="container">
+      <div class="card">
+        <div class="circle">
+          <img src="/static/images/material.png">
+        </div>
+        <div class="content">
+          <h>STUDY MATERIAL</h><br>
+          <p> Click <b>open</b> to explore various top class study material</p>
+          <a href="{% url 'pdfs' %}" style="color:white">OPEN</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="circle">
+          <img src="/static/images/tutorial.jpg">
+        </div>
+        <div class="content">
+          <h>ONLINE TUTORIALS</h><br>
+          <p>Click <b>open</b> to watch various tutorials from the best mentors.</p>
+          <a href="{% url 'videos' %}" style="color:white">OPEN</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="circle">
+          <img src="/static/images/to-do.png">
+        </div>
+        <div class="content">
+          <h>TO-DO LIST</h><br>
+          <p> Click <b>create</b> to make your own to-do list</p>
+          <a href="{% url 'todo' %}" style="color:white">CREATE</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="circle">
+          <img src="/static/images/profiles.png">
+        </div>
+        <div class="content">
+          <h>PROFILE</h><br>
+          <p>Click <b>view </b> to open your profile securely.</p>
+          <a href="{% url 'profile' %}" style="color:white">PROFILE</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

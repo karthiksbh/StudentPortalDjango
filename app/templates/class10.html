@@ -1,0 +1,158 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/static/css/logincss.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
+    <title>Class 10</title>
+  </head>
+  <body>
+
+  <div class="banner">
+            <div class="navbar">
+                <img src="/static/images/logo.png" class="logo">
+                <ul>
+                <li><a href="{% url 'homepage' %}" style="color:white"><b>HOME</b></a></li>              
+                <li><a href="{% url 'pdfs' %}" style="color:white"><b>STUDY MATERIAL</b></a></li>
+                <li><a href="{% url 'logout' %}" style="color:white"><b>LOGOUT</b></a></li>
+                </ul>
+            </div>
+
+    <div class="container">
+      <div class="row my-3 mt-4">
+        <div class="col-sm-9 offset-sm-2">
+          <h3 align="center">Welcome {{request.user.username|capfirst}}</h3>
+          <h3 align="center">STUDY MATERIAL FOR CLASS 10</h3>
+          <br />
+        <br>
+
+    <center>
+    <table class="table table-hover table-light mb-5">
+  <thead>
+    <tr>
+      <th scope="col">S.No</th>
+      <th scope="col">Mathematics</th>
+      <th scope="col">Science</th>
+      <th scope="col">Social Science</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-maths/chapter-1-real-numbers/">Real Numbers</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-science-chapter-1-chemical-reactions-and-equation/">Chemical Reactions and Equations</a></td>
+      <td><a href="https://byjus.com/ncert-book-class-10-social-science/">Power sharing</a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-maths/chapter-2-polynomials/">Polynomials</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-science-chapter-2-acid-bases-and-salts/">Acids Bases and salt</a></td>
+      <td><a href="https://byjus.com/ncert-book-class-10-social-science/">Fedaralism</a></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-maths/chapter-3-linear-equations-in-two-variables/">Pair of Linear Equations in Two Variables</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-science-chapter-3-metals-and-non-metals/">Metals and Non-Metals</a></td>
+      <td><a href="https://byjus.com/ncert-book-class-10-social-science/">Democracy and Diversity</a></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-maths/chapter-4-quadratic-equations/">Quadratic Equations</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-science-chapter-4-carbon-and-its-compounds/">Carbon and its Compounds</a></td>
+      <td><a href="https://byjus.com/ncert-book-class-10-social-science/">Gender,Religion and Caste</a></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-maths/chapter-5-arithmetic-progressions/">Arithmetic Progressions</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-science-chapter-5-periodic-classification-of-elements/">Periodic Classification of Elements</a></td>
+      <td><a href="https://byjus.com/ncert-book-class-10-social-science/">Popular Struggles and Movements</a></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-maths/chapter-6-triangles/">Triangles</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-science-chapter-6-life-process/">Life Process</a></td>
+      <td><a href="https://byjus.com/ncert-book-class-10-social-science/">Political parties</a></td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-maths/chapter-7-coordinate-geometry/">Co-ordinate Geometry</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-science-chapter-7-control-and-coordination/">Control and Co-ordination</a></td>
+      <td><a href="https://byjus.com/ncert-book-class-10-social-science/">Outcomes of Democracy</a></td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-maths/chapter-8-introduction-to-trigonometry/">Introduction to Trigonometry</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-science-chapter-8-how-do-organisms-reproduce/">How do Organisms Reproduce</a></td>
+      <td><a href="https://byjus.com/ncert-book-class-10-social-science/">Challenges to democracy</a></td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-maths/chapter-9-some-applications-of-trigonometry/">Some Applications of Trigonotry</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-science-chapter-9-heredity-and-evolution/">Heridity and Evolution</a></td>
+      <td><a href="https://byjus.com/ncert-book-class-10-social-science/">Resources and Development</a></td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-maths/chapter-10-circles/">Circles</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-science-chapter-10-light-reflection-and-refraction/">Light-Reflection and Refraction</a></td>
+      <td><a href="https://byjus.com/ncert-book-class-10-social-science/">Forest and Wildlife</a></td>
+    </tr>
+    <tr>
+      <th scope="row">11</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-maths/chapter-11-constructions/">Constructions</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-science-chapter-11-human-eye-and-colorful-world/">The Human Eye and the Colorful World</a></td>
+      <td><a href="https://byjus.com/ncert-book-class-10-social-science/">Water Resources</a></td>
+    </tr>
+    <tr>
+      <th scope="row">12</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-maths/chapter-12-areas-related-to-circles/">Areas Related to Circles</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-science-chapter-12-electricity/">Electricity</a></td>
+      <td><a href="https://byjus.com/ncert-book-class-10-social-science/">Agriculture</a></td>
+    </tr>
+    <tr>
+      <th scope="row">13</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-maths/chapter-13-surface-areas-and-volumes/">Surface Areas and Volumes</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-science-chapter-13-magnetic-effects-electric-current/">Magnetic effects of electric current</a></td>
+      <td><a href="https://byjus.com/ncert-book-class-10-social-science/">Minerals and Energy</a></td>
+    </tr>
+    <tr>
+      <th scope="row">14</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-maths/chapter-14-statistics/">Statitics</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-science-chapter-14-sources-of-energy/">Sources of Energy</a></td>
+      <td><a href="https://byjus.com/ncert-book-class-10-social-science/">Manufacturing Industries</a></td>
+    </tr> 
+    <tr>
+      <th scope="row">15</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-maths/chapter-15-probability/">Probability</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-science-chapter-15-our-environment/">Our Environment</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">16</th>
+      <td></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-10-science-chapter-16-sustainable-management-of-natural-resources/">Sustainable Mangement of Natural Resources</a></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+</div>
+</div>
+</div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>

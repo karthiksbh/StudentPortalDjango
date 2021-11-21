@@ -1,0 +1,77 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/static/css/logincss.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
+    <title>Profile Page</title>
+  </head>
+  <body>
+
+  <div class="banner">
+            <div class="navbar">
+                <img src="/static/images/logo.png" class="logo">
+                <ul>
+                <li><a href="{% url 'homepage' %}" style="color:white"><b>HOME</b></a></li>              
+                <li><a href="{% url 'changepassword' %}" style="color:white"><b>CHANGE PASSWORD</b></a></li>
+                <li><a href="{% url 'logout' %}" style="color:white"><b>LOGOUT</b></a></li>
+                </ul>
+            </div>
+
+
+    {% if request.user.is_authenticated %}
+
+    <div class="container">
+      <div class="row my-3 mt-4">
+        <div class="col-sm-7 offset-sm-3">
+          <h3 align="center">Welcome {{request.user.username|capfirst}}</h3>
+          <h3 align="center">Your Student Profile</h3>
+          <br />
+        <br>
+    
+
+    <div class="col-sm offset-sm-1">
+   <div class="row">
+   {% for p in profile_there %}
+    
+    <div class="col-sm-6">
+     <div class="card" style="width: 38rem; border-radius:15px ; border-style:solid ; border-style: double; background-color: white";>
+      <div class="card-body">
+       <br>
+       <p><b>Student Name: </b> {{p.student_name}}</p>
+       <p><b>Student Class: </b> {{p.class_student}}  </p>
+       <p><b>Student Email: </b> {{p.student_email}}</p>
+       <p><b>Student Mobile Number: </b> {{p.mobile_number}}</p>
+       <p><b>Student School/College: </b>{{p.school}}</p>
+       <p><b>Student City: </b>{{p.city}}</p>
+
+       <div class="button-one mb-4" align="center">
+    <a type="button" class="btn btn-primary"style="width: 12rem" href="{% url 'editprofile' p.id %}">Edit Your Profile</a>
+    </div>
+      </div>
+     </div>
+    </div>
+    {% endfor %}
+
+    
+
+          </div>
+          </div>
+          </div>
+
+    {% endif %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>

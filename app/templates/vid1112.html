@@ -1,0 +1,155 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/static/css/logincss.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
+    <title>Class 10</title>
+  </head>
+  <body>
+
+  <div class="banner">
+            <div class="navbar">
+                <img src="/static/images/logo.png" class="logo">
+                <ul>
+                <li><a href="{% url 'homepage' %}" style="color:white"><b>HOME</b></a></li>              
+                <li><a href="{% url 'videos' %}" style="color:white"><b>ONLINE MATERIAL</b></a></li>
+                <li><a href="{% url 'logout' %}" style="color:white"><b>LOGOUT</b></a></li>
+                </ul>
+            </div>
+
+    <div class="container">
+      <div class="row my-3 mt-4">
+        <div class="col-sm-9 offset-sm-2">
+          <h3 align="center">Welcome {{request.user.username|capfirst}}</h3>
+          <h3 align="center">ONLINE MATERIAL FOR CLASS 11 AND 12</h3>
+          <br />
+        <br>
+
+    <center>
+    <table class="table table-hover table-light mb-5">
+  <thead>
+    <tr>
+      <th scope="col">S.No</th>
+      <th scope="col">Mathematics</th>
+      <th scope="col">Physics</th>
+      <th scope="col">Economics</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><a href="https://youtu.be/2jP4h1S9LDE">Trigonometry</a></td>
+      <td><a href="https://youtu.be/m5VbK66a254">Electric Charges and Fields</a></td>
+      <td><a href="https://youtu.be/ifdJ1frDef8">Bricks beads and bones</a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><a href="https://youtu.be/9bwYZgd6eik">Sets</a></td>
+      <td><a href="https://youtu.be/A2qXSSYL9lM">Current Electricity</a></td>
+      <td><a href="https://youtu.be/DegyPsewZ9U">Kings,farmers and towns</a></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><a href="https://youtu.be/52TLszIQGcU">Relations</a></td>
+      <td><a href="https://youtu.be/QUPXVv-ZhiE">Moving charges and Magnets</a></td>
+      <td><a href="https://youtu.be/fyK4VoMIfZ4">Kingship castle and class</a></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><a href="https://youtu.be/w31msJEphO0">Complex Numbers</a></td>
+      <td><a href="https://youtu.be/Y5NyGqLkjvg">Magnetic Induction and Alternating Currents</a></td>
+      <td><a href="https://youtu.be/i3ws2Z7iDRQ">Thinkers beliefs and buildings</a></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td><a href="https://youtu.be/R33e9HooZZo">Permutations and Combinations</a></td>
+      <td><a href="https://youtu.be/m5-GVhnH8OY">Electromagnetic Waves</a></td>
+      <td><a href="https://youtu.be/j14cUggjPIU">Bhakthi sufi</a></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td><a href="https://youtu.be/XOQIAO81nfU">Quadratic equations</a></td>
+      <td><a href="https://youtu.be/FlzVMA78qfI">Optics</a></td>
+      <td><a href="https://youtu.be/1Yz5bfmMfRE">Kings and Chronicals</a></td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td><a href="https://youtu.be/PdYJj8x_CGE">Straight Lines</a></td>
+      <td><a href="https://youtu.be/3W6c7ETxwPg">Atoms and Nuclei</a></td>
+      <td><a href="https://youtu.be/cqJ0m6jbnnE">Colonialism and country side</a></td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td><a href="https://youtu.be/BGZ1L6JHX34">Limits and Continuity</a></td>
+      <td><a href="https://youtu.be/ePEVjPnC2UE">Electronic Devices</a></td>
+      <td><a href="https://youtu.be/-7MVnXOL4aw">Rebels and Raj</a></td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td><a href="https://youtu.be/-i41jcnefr8">Differentiation</a></td>
+      <td><a href="https://youtu.be/zOT-sTyhXp0">Dual nature of Radiation and Matter</a></td>
+      <td><a href="https://youtu.be/66qzHzJnuIY">Mahathma Gandhi and the Nationalist Moment</a></td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td><a href="https://youtu.be/X6xYDyLfbNg">Vectors</a></td>
+      <td><a href="https://youtu.be/e8cPTtEueC0">Solutions</a></td>
+      <td><a href="https://youtu.be/S8HI972dO_A ">Framing the Constitution</a></td>
+    </tr>
+    <tr>
+      <th scope="row">11</th>
+      <td><a href="https://youtu.be/w64b9Nrh-cA">Binomial Theorem</a></td>
+      <td><a href="https://youtu.be/CMwGopvmGo8">Solid State</a></td>
+      <td><a href="https://youtu.be/_nepupPG_AE">The Cold War era</a></td>
+    </tr>
+    <tr>
+      <th scope="row">12</th>
+      <td><a href="https://youtu.be/N9Tgs1P9pD0">Circles</a></td>
+      <td><a href="https://youtu.be/xQJOfAKgSOY">P-block Elements </a></td>
+      <td><a href="https://youtu.be/Z4ttf_yJ8Dg">Challenges of Nation Building</a></td>
+    </tr>
+    <tr>
+      <th scope="row">13</th>
+      <td><a href="https://youtu.be/OV-_g6rYvrk">Mathematical Reasoning</a></td>
+      <td><a href="https://youtu.be/qrY2DV8l7es">Alcohols,Phenols and Ethanols</a></td>
+      <td><a href="https://youtu.be/b4h8r2c_a-Y">Planned Development</a></td>
+    </tr>
+    <tr>
+      <th scope="row">14</th>
+      <td><a href="https://youtu.be/0zqLSZtDV1I">Matrices</a></td>
+      <td><a href="https://youtu.be/H5tn5Tw50gs">Biomolecules</a></td>
+      <td><a href="https://youtu.be/qO0C1jC2tnE">United Nations and Organizations </a></td>
+    </tr>
+    <tr>
+      <th scope="row">15</th>
+      <td><a href="https://youtu.be/9akaDUOjKNs">Application of derivatives</a></td>
+      <td><a href="https://youtu.be/msvuT2_KWvU">Electrochemistry</a></td>
+      <td><a href="https://youtu.be/pfjGCONiI8s">Globalization</a></td>
+    </tr>
+
+       
+  </tbody>
+</table>
+</center>
+
+</div>
+</div>
+</div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>
+

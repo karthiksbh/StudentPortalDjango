@@ -1,0 +1,157 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/static/css/logincss.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
+    <title>Class 8</title>
+  </head>
+  <body>
+
+  <div class="banner">
+            <div class="navbar">
+                <img src="/static/images/logo.png" class="logo">
+                <ul>
+                <li><a href="{% url 'homepage' %}" style="color:white"><b>HOME</b></a></li>              
+                <li><a href="{% url 'pdfs' %}" style="color:white"><b>STUDY MATERIAL</b></a></li>
+                <li><a href="{% url 'logout' %}" style="color:white"><b>LOGOUT</b></a></li>
+                </ul>
+            </div>
+
+    <div class="container">
+      <div class="row my-3 mt-4">
+        <div class="col-sm-9 offset-sm-2">
+          <h3 align="center">Welcome {{request.user.username|capfirst}}</h3>
+          <h3 align="center">STUDY MATERIAL FOR CLASS 8</h3>
+          <br />
+        <br>
+
+    <center>
+    <table class="table table-hover table-light mb-5">
+  <thead>
+    <tr>
+      <th scope="col">S.No</th>
+      <th scope="col">Mathematics</th>
+      <th scope="col">Science</th>
+      <th scope="col">Social Science</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-maths/chapter-1-rational-numbers/">Rational numbers</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-science/chapter-1-crop-production-and-management/">Crop production and Management</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-8-social-science/">How,When and Where</a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-maths/chapter-2-linear-equation/">Linear Equations in Two Variables</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-science/chapter-2-microorganism-friend-foe/">Microorganisms:friend and foe</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-8-social-science/">From Trade to Teritary</a></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-maths/chapter-3-understanding-quadrilaterals/">Understanding Quadrilaterals</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-science/chapter-3-synthetic-fibres-and-plastics/">Synthetic Fibers and Plastics </a></td>
+      <td><a href="https://byjus.com/ncert-books-class-8-social-science/">Ruling the country side</a></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-maths/chapter-4-applied-practical-geometry/">Practical Geometry</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-science/chapter-4-materials-metals-and-non-metals/">Materials:metals and non metals</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-8-social-science/">Tribals,dikus and the Vision of a golden age</a></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-maths/chapter-5-about-data-handling/">Data Handling</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-science/chapter-5-coal-and-petroleum/">Coal and Petroleum</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-8-social-science/">When people Rebel</a></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-maths/chapter-6-square-square-roots/">Square and Square roots</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-science/chapter-6-combustion-and-flames/">Combustion and Flame</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-8-social-science/">Weavers ,Iron Smelters and Factory Owners</a></td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-maths/chapter-7-cube-and-cube-roots/">Cube and Cube roots</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-science/chapter-7-conservation-of-plants-and-animals/">Conseravation of plants and animlas</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-8-social-science/">Civilizing the"Native",Educating the nation</a></td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-maths/chapter-8-comparing-quantities/">Comparing Quantities</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-science/chapter-8-cell-structure-and-functions/">Cell-Structure and Functions</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-8-social-science/">Women,Caste and Reform</a></td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-maths/chapter-9-algebraic-expressions-and-identities/">Algebraic Expressions and Indentities</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-science/chapter-9-reproduction-in-animals/">Reproduction in Animlas</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-8-social-science/">The making of the NAtional Movement:1870s-1947</a></td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-maths/chapter-10-visualizing-solid-shapes/">Visualising Solid Shape</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-science/chapter-10-reaching-the-age-of-adolescence/">Reaching the age of adolescence</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-8-social-science/">India after Independence</a></td>
+    </tr>
+    <tr>
+      <th scope="row">11</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-maths/chapter-11-mensuration/">Mensuration</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-science/">Sound</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-8-social-science/">Resources</a></td>
+    </tr>
+    <tr>
+      <th scope="row">12</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-maths/chapter-12-exponents-and-powers/">Exponents and Powers</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-science/">Chemical effects of current</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-8-social-science/">Land,soil,water,natural vegetation and wildlife resources</a></td>
+    </tr>
+    <tr>
+      <th scope="row">13</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-maths/chapter-13-direct-inverse-proportions/">Direct and Inverse Propostions</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-science/">Some Natural Phenomena</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-8-social-science/">Minerals and Power Resources</a></td>
+    </tr>
+    <tr>
+      <th scope="row">14</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-maths/chapter-14-factorisation/">Factorisation</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-science/">Light</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-8-social-science/">Agriculture</a></td>
+    </tr> 
+    <tr>
+      <th scope="row">15</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-maths/chapter-15-introduction-to-graphs/">Introduction to Graphs</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-science/">Stars and Solar system</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-8-social-science/">Industries</a></td>
+    </tr>
+    <tr>
+      <th scope="row">16</th>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-maths/chapter-16-playing-with-number/">Playing with Numbers</a></td>
+      <td><a href="https://byjus.com/ncert-solutions-class-8-science/">Pollution of Air and Water</a></td>
+      <td><a href="https://byjus.com/ncert-books-class-8-social-science/">Human Resoures</a></td>
+    </tr>
+  </tbody>
+</table>
+</center>
+</div>
+</div>
+</div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>

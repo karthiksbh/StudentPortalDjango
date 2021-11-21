@@ -1,0 +1,159 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/static/css/logincss.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
+    <title>Class 8</title>
+  </head>
+  <body>
+
+  <div class="banner">
+            <div class="navbar">
+                <img src="/static/images/logo.png" class="logo">
+                <ul>
+                <li><a href="{% url 'homepage' %}" style="color:white"><b>HOME</b></a></li>              
+                <li><a href="{% url 'videos' %}" style="color:white"><b>ONLINE MATERIAL</b></a></li>
+                <li><a href="{% url 'logout' %}" style="color:white"><b>LOGOUT</b></a></li>
+                </ul>
+            </div>
+
+    <div class="container">
+      <div class="row my-3 mt-4">
+        <div class="col-sm-9 offset-sm-2">
+          <h3 align="center">Welcome {{request.user.username|capfirst}}</h3>
+          <h3 align="center">ONLINE MATERIAL FOR CLASS 8</h3>
+          <br />
+        <br>
+
+    <center>
+    <table class="table table-hover table-light mb-5">
+  <thead>
+    <tr>
+      <th scope="col">S.No</th>
+      <th scope="col">Mathematics</th>
+      <th scope="col">Science</th>
+      <th scope="col">Social Science</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><a href="https://youtu.be/G9n8HbMdUIk">Rational numbers</a></td>
+      <td><a href="https://youtu.be/rsc6e_JEDY0">Crop production and management</a></td>
+      <td><a href="https://youtu.be/h6FqjV5g2So">How When and Where</a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><a href="https://youtu.be/vrTEC05LVho">Linear Equations in Two Variables</a></td>
+      <td><a href="https://youtu.be/k3Q9L798tAk">Friends and Foe</a></td>
+      <td><a href=""></a></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><a href="https://youtu.be/dpuuaD4Zkck">Understanding Quadrilaterals</a></td>
+      <td><a href="https://youtu.be/Js5bwp-nuSY">Synthetic Fibers and plastics</a></td>
+      <td><a href="https://youtu.be/mqzwTYQRIlg">The Company Establishes Power</a></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><a href="https://youtu.be/GCl1xs4lLZw">Practical Geometry</a></td>
+      <td><a href="https://youtu.be/EvtPkGCHTVk">Metals and Non-metals</a></td>
+      <td><a href="https://youtu.be/fmh5nfll6R8">Why does a Country need a Constitution</a></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td><a href="https://youtu.be/-iiGndLUsac">Data Handling</a></td>
+      <td><a href="https://youtu.be/3WNOGPMIQdk">Coal and Petroleum</a></td>
+      <td><a href="https://youtu.be/-JRtf_f72f4">Features and Secularism</a></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td><a href="https://youtu.be/54ZvwlT2kfM">Square and Square roots</td>
+      <td><a href="https://youtu.be/t7aPtXw9dms">Combustion and Flame</a></td>
+      <td><a href="https://youtu.be/X_obj8qxV5w">Role of Parliament</a></td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td><a href="https://youtu.be/9CPCi9uIsbc">Cube and Cube roots</a></td>
+      <td><a href="https://youtu.be/Cy8Dt6HeXIs">Conservation of Plants and Animals</a></td>
+      <td><a href="https://youtu.be/kPqAkVrueHI">Land,Water,Soil,Natural Vegetation</a></td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td><a href="https://youtu.be/jE9WkKUWrMA">Comparing Quantities</a></td>
+      <td><a href="https://youtu.be/b0etm8pAfc4">Cell Structures and Functions</a></td>
+      <td><a href="https://youtu.be/9VTtHhz8HdM">Resources</a></td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td><a href="https://youtu.be/V47xmqEbt_o">Algebraic Expressions and Indentities</a></td>
+      <td><a href=" https://youtu.be/wfpXdKW117s">Reproduction in animals</a></td>
+      <td><a href="https://youtu.be/_mAhf6JcvC0">Ruling the Country side</a></td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td><a href="https://youtu.be/X3Ij1Y_332s">Visualising Solid Shape</a></td>
+      <td><a href=" https://youtu.be/8ly7CnSzKjk">Reaching the age of Adolescence</a></td>
+      <td><a href="https://youtu.be/k_cDTkIYRDs">Minerals and Power Resources</a></td>
+    </tr>
+    <tr>
+      <th scope="row">11</th>
+      <td><a href="https://youtu.be/VEPq4dfrlZI">Mensuration</a></td>
+      <td><a href=""></a></td>
+      <td><a href=""></a></td>
+    </tr>
+    <tr>
+      <th scope="row">12</th>
+      <td><a href="https://youtu.be/DMX3r738ZGs">Direct and Inverse Propostions</a></td>
+      <td><a href=""></a></td>
+      <td><a href="https://youtu.be/bxgDaHZjqIU">Understanding Secularism</a></td>
+    </tr>
+    <tr>
+      <th scope="row">13</th>
+      <td><a href="https://youtu.be/T8r2IkPCu9g">Exponents and Powers</a></td>
+      <td><a href=""></a></td>
+      <td><a href=""></a></td>
+    </tr>
+    <tr>
+      <th scope="row">14</th>
+      <td><a href="https://youtu.be/5D9Tsa4sh1U">Factorisation</a></td>
+      <td><a href=""></a></td>
+      <td><a href=""></a></td>
+    </tr> 
+    <tr>
+      <th scope="row">15</th>
+      <td><a href="https://youtu.be/RUuHdfD8CM0">Introduction to Graphs</a></td>
+      <td><a href=""></a></td>
+      <td><a href=""></a></td>
+    </tr>
+    <tr>
+      <th scope="row">16</th>
+      <td><a href="https://youtu.be/i99wATgfVgo">Playing with Numbers</a></td>
+      <td><a href=""></a></td>
+      <td><a href=""></a></td>
+    </tr>
+  </tbody>
+</table>
+</center>
+
+</div>
+</div>
+</div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>
+

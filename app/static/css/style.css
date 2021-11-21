@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0),rgba(4,9,30,0)), url(/static/images/home.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:rgb(106, 197, 250);
+    box-shadow: 5px 0px 10px rgb(97, 96, 96);
+    font-family:'Times New Roman', Times, serif;
+    height:0.5cm ; 
+    
+
+}
+
+.logo{
+    width: 186px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-left: 10px;
+    float: left
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size:120%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    border-radius: 3px;
+    width: 0;
+    background:rgb(255, 255, 255);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.07s;
+
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.content h1{
+    padding-right: 385px;
+    padding-top: 30px;
+    color: rgb(81, 4, 112);
+    text-align:right;
+    font-family: 'Trebuchet MS';
+    font-size: 36px;
+    
+}
+
+.content p{
+    padding-left: 676px;
+    padding-right: 30px;
+    padding-top: 30px;
+    font-size: 25px;
+    color: rgb(81, 4, 112);
+    text-align: center;
+    font-family: 'Trebuchet MS';
+}
+
+.content img{
+    float: right;
+    margin-top: 0;
+    padding-top: 10px;
+    
+}
+
+button{
+    font-size: 20px;
+    width: 150px;
+    padding: 4px 0;
+    height: 43px;
+    text-align:center;
+    margin: 20px 20px;
+    border-radius: 40px;
+    font-weight: bold;
+    border: 2px solid ;
+    background-color: deepskyblue;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    left: 900px;
+    top: 20px;
+}
+
+span{
+    height: 100%;
+    width: 0;
+    border-radius: 40px;
+    position: absolute;
+    left : 0;
+    padding-left: 33px;
+    bottom: 0;
+    z-index: -1;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover{
+    border : none;
+    background: rgb(109, 216, 2);
+    transition: 0.2s;
+    color: white;
+}
+
+
+

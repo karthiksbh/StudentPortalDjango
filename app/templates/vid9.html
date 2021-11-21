@@ -1,0 +1,157 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/static/css/logincss.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+
+    <title>Class 9</title>
+  </head>
+  <body>
+
+  <div class="banner">
+            <div class="navbar">
+                <img src="/static/images/logo.png" class="logo">
+                <ul>
+                <li><a href="{% url 'homepage' %}" style="color:white"><b>HOME</b></a></li>              
+                <li><a href="{% url 'videos' %}" style="color:white"><b>ONLINE MATERIAL</b></a></li>
+                <li><a href="{% url 'logout' %}" style="color:white"><b>LOGOUT</b></a></li>
+                </ul>
+            </div>
+
+    <div class="container">
+      <div class="row my-3 mt-4">
+        <div class="col-sm-9 offset-sm-2">
+          <h3 align="center">Welcome {{request.user.username|capfirst}}</h3>
+          <h3 align="center">ONLINE MATERIAL FOR CLASS 9</h3>
+          <br />
+        <br>
+
+    <center>
+    <table class="table table-hover table-light mb-5">
+  <thead>
+    <tr>
+      <th scope="col">S.No</th>
+      <th scope="col">Mathematics</th>
+      <th scope="col">Science</th>
+      <th scope="col">Social Science</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><a href="https://youtu.be/G0meZOFE0-Q">Number system</a></td>
+      <td><a href="https://youtu.be/Z5ZAY-lW4TU">Matter in our Surroundings</a></td>
+      <td><a href="https://youtu.be/adcaMGcrPvI">French Revolution</a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><a href="https://youtu.be/suFcvDKehag">Polynomials</a></td>
+      <td><a href="https://youtu.be/fE51ilk1dxE">Is matter around us pure?</a></td>
+      <td><a href="https://youtu.be/yK0mBPYc7NA">The Story of Palampur</a></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><a href="https://youtu.be/4QeCo794t9k">Coordinate Geometry</a></td>
+      <td><a href="https://youtu.be/s9dbId8lTyM">Atoms and Molecules</a></td>
+      <td><a href="https://youtu.be/jiEqSQJ8b3w">Indian Size and Location</a></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><a href="https://youtu.be/es9DgQz5GNQ">Linear Equations in Two Variables</a></td>
+      <td><a href="https://youtu.be/P-clvccPtPM">Structure of a Atom</a></td>
+      <td><a href="https://youtu.be/jeNTQ8jgz9Y">People as Resource</a></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td><a href="https://youtu.be/xWxwlMYaELs">Introduction to Euclid Geometry</a></td>
+      <td><a href="https://youtu.be/6QXvNv2ODpw">The Fundamentals unit of Life</a></td>
+      <td><a href="https://youtu.be/39vaVtIXIYk">Physical Features of India</a></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td><a href="https://youtu.be/j1FMzlIH9Ng">Lines and Angles</a></td>
+      <td><a href="https://youtu.be/5l9dEv3Tezk">Tissues</a></td>
+      <td><a href="https://youtu.be/VwzKrlLIwVk">What is Democracy and Why is Democracy</a></td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td><a href="https://youtu.be/eqwNkZSA27k">Triangles</a></td>
+      <td><a href="https://youtu.be/HHbFCy2lEVc">Diversity in Living Organisms</a></td>
+      <td><a href="https://youtu.be/4O4T6GChW38">Guiding values of the Constitution</a></td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td><a href="https://youtu.be/sjKJ4rBqZqg">Quadrilaterals</a></td>
+      <td><a href="https://youtu.be/i5ZTwV-r-8o">Motion</a></td>
+      <td><a href="https://youtu.be/xCizSOl8EGg">Working of Constitution</a></td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td><a href="https://youtu.be/cbDp94RbvHk">Areas of Parallelogram</a></td>
+      <td><a href="https://youtu.be/eeG9_f9ELBA">Force and Laws of Motion</a></td>
+      <td><a href="https://youtu.be/_jApjzZXmjc">Nazism ,the rise of Hitler</a></td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td><a href="https://youtu.be/UQHNTeDIn5E">Circles</a></td>
+      <td><a href="https://youtu.be/GwX_b9fjIbk">Gravitation</a></td>
+      <td><a href="https://youtu.be/ZOkx5ZjwDew">Drinage</a></td>
+    </tr>
+    <tr>
+      <th scope="row">11</th>
+      <td><a href="https://youtu.be/VXQ_BnWzwQ4">Constructions</a></td>
+      <td><a href="https://youtu.be/38xLDSrMxeE">Work Power and Energy</a></td>
+      <td><a href="https://youtu.be/usRQ_SWo2K8">Climate</a></td>
+    </tr>
+    <tr>
+      <th scope="row">12</th>
+      <td><a href="https://youtu.be/V1jY2AKAQd0">Heron's Formula</a></td>
+      <td><a href="https://youtu.be/aynVhvlDYkk">Sound</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">13</th>
+      <td><a href="https://youtu.be/mYpFtB020gY">Surface Areas and Volumes</a></td>
+      <td><a href="https://youtu.be/tgQYXJt9vNo">Why do we fall ill</a></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">14</th>
+      <td><a href="https://youtu.be/Vm-rRzx-hEc">Statitics</a></td>
+      <td><a href="https://youtu.be/rLKMERwFQz0">Natural resources</a></td>
+      <td></td>
+    </tr> 
+    <tr>
+      <th scope="row">15</th>
+      <td><a href="https://youtu.be/D10qCCrE-Bo">Probability</a></td>
+      <td><a href="https://youtu.be/Na9yUG_VAKc">Improvment in food resources</a></td>
+      <td></td>
+    </tr>
+   
+
+
+    
+  </tbody>
+</table>
+</center>
+
+</div>
+</div>
+</div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>
+
